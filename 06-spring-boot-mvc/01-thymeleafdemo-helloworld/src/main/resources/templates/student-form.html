@@ -26,10 +26,7 @@
 
     <br><br>
     Favourite Programming language
-<!--    <input type="radio" th:field="*{favouritelanguage}" th:value="React JS">React JS</input>-->
-    <input type="radio" th:field="*{favouritelanguage}" th:value="Java">Java</input>
-    <input type="radio" th:field="*{favouritelanguage}" th:value="Python">Python</input>
-    <input type="radio" th:field="*{favouritelanguage}" th:value="Go">Go</input>
+    <input type="radio" th:field="*{favouritelanguage}" th:each="tempLang:${languages}" th:value="${tempLang}" th:text="${tempLang}"/>
     <br><br>
 
     <input type="submit" value="Submit" />
