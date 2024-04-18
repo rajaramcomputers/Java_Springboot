@@ -29,6 +29,14 @@
     <input type="radio" th:field="*{favouritelanguage}" th:each="tempLang:${languages}" th:value="${tempLang}" th:text="${tempLang}"/>
     <br><br>
 
+    <br><br>
+    Favourite OS Systems
+    <input type="checkbox" th:field="*{favouriteSystem}" th:each="tempSystem:${systems}" th:value="${tempSystem}" th:text="${tempSystem}"/>
+<!--    <input type="checkbox" th:field="*{favouriteSystem}" th:value="Linux">Linux</input>-->
+<!--    <input type="checkbox" th:field="*{favouriteSystem}" th:value="MacOs">MacOs</input>-->
+<!--    <input type="checkbox" th:field="*{favouriteSystem}" th:value="'Microsoft Windows'">Microsoft Windows</input>-->
+    <br><br>
+
     <input type="submit" value="Submit" />
 </form>
 

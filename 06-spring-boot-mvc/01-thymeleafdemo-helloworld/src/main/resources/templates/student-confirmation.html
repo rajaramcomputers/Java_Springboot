@@ -13,5 +13,14 @@ The student is confirmed: <span th:text="${student.firstname} + ' ' + ${student.
 <br><br>
 
 Programming Language is : <span th:text="${student.favouritelanguage}" />
+
+<br><br>
+
+Programming Language is :
+
+<ul>
+<li th:each="tempSystem : ${student.favouriteSystem}" th:text="${tempSystem}"/>
+</ul>
+
 </body>
 </html>
