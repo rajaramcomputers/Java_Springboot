@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Portal Registration</title>
+    <style>
+        .error{
+        color:red
+        }
+    </style>
+</head>
+<body>
+<i>Asterisk(*) means compulsory</i>
+<br><br>
+
+<form th:action="@{/processForm}" th:object="${student}" method="POST">
+First Name : <input type="text" th:field="*{firstName}"/>
+<br><br>
+Last Name (*) : <input type="text" th:field="*{lastName}"/>
+<span th:if="${#fields.hasErrors('lastName')}"
+      th:errors="*{lastName}"
+      class="error"></span>
+
+<br><br>
+
+FreePasses  : <input type="text" th:field="*{freePasses}"/>
+<span th:if="${#fields.hasErrors('freePasses')}"
+      th:errors="*{freePasses}"
+      class="error"></span>
+
+<br><br>
+
+Postal Code  : <input type="text" th:field="*{postalCode}"/>
+<span th:if="${#fields.hasErrors('postalCode')}"
+  th:errors="*{postalCode}"
+  class="error"></span>
+
+<br><br>
+
+<input type="submit" value="Submit"/>
+
+</form>
+
+</body>
+</html>
