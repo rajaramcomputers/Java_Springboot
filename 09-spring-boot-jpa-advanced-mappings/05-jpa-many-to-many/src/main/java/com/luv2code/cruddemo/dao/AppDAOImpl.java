@@ -140,7 +140,7 @@ public class AppDAOImpl implements AppDAO{
 
     @Override
     @Transactional
-    public void delete(Student s) {
+    public void delete(Student s) { 
         Student temp=findStudentAndCoursesByStudentId(s.getId());
         theEntityManager.remove(temp);
     }
